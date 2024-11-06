@@ -64,9 +64,7 @@ Esta aplicación permite a los usuarios capturar fotos y grabar videos en el con
 - **Mensajes Claros**: Se muestran mensajes de confirmación en acciones importantes, y un mensaje de agradecimiento en la pantalla principal.
 
 ---
-## autor
 
-- [@KevinAlvardo](https://github.com/KevinAlvardo/parcial-camara)
 
 ---
 ## Installation
