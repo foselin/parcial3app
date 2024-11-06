@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Vista de previsualización de la cámara -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRecordVideo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+
+
+
+
+    </androidx.camera.view.PreviewView>
+
+    <!-- Botón de flash con ícono -->
+    <ImageButton
+        android:id="@+id/btnFlashToggle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_flash_off"
+        android:contentDescription="Flash"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:padding="8dp" />
+
+    <!-- Barra de zoom invisible para el backend -->
+    <SeekBar
+        android:id="@+id/zoomSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/btnRecordVideo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp" />
+
+
+
+    <!-- Botón de Zoom Out (-), alineado a la izquierda del centro -->
+    <ImageButton
+        android:id="@+id/btnZoomOut"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_zoom_out"
+        android:contentDescription="Zoom Out"
+        app:layout_constraintBottom_toTopOf="@+id/btnRecordVideo"
+        app:layout_constraintEnd_toStartOf="@+id/btnZoomIn"
+        android:layout_marginBottom="16dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:padding="8dp" />
+
+    <!-- Botón de Zoom In (+), alineado a la derecha del centro -->
+    <ImageButton
+        android:id="@+id/btnZoomIn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_zoom_in"
+        android:contentDescription="Zoom In"
+        app:layout_constraintBottom_toTopOf="@+id/btnRecordVideo"
+        app:layout_constraintStart_toEndOf="@+id/btnZoomOut"
+        android:layout_marginBottom="16dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:padding="8dp" />
+
+    <!-- Botón para grabar video con ícono, centrado en la parte inferior -->
+    <ImageButton
+        android:id="@+id/btnRecordVideo"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/ic_video"
+        android:contentDescription="Grabar Video"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:padding="8dp" />
+
+    <!-- Botón para cambiar cámara con ícono, alineado en la esquina inferior derecha -->
+    <ImageButton
+        android:id="@+id/btnSwitchCamera"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_switch_camera"
+        android:contentDescription="Cambiar Cámara"
+        app:layout_constraintBottom_toTopOf="@id/btnRecordVideo"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:padding="8dp" />
+
+    <ImageButton
+        android:id="@+id/btnApplyFilter"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_filter_on"
+        android:contentDescription="Filtro"
+        app:layout_constraintBottom_toTopOf="@id/btnZoomOut"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:padding="8dp" />
+
+    <!-- Botón de filtro con ícono, alineado en la esquina inferior izquierda -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
